@@ -21,6 +21,7 @@ const cubeController = require('./controllers/cubeController');
 
 router.get('/', homeController.getHomePage);
 router.get('/about', homeController.getAboutPage);
+router.get('/404', homeController.getErrorPage);
 
 router.get('/create', cubeController.getCreateCube);
 router.post('/create', cubeController.postCreateCube);
