@@ -41,6 +41,13 @@
       "imageUrl": "3",
       "difficultyLevel": "1",
       "id": 6
+    },
+    {
+      "name": "2",
+      "description": "2",
+      "imageUrl": "2",
+      "difficultyLevel": "1",
+      "id": 7
     }
   ]
 }

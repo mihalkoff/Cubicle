@@ -9,7 +9,8 @@ exports.postCreateCube = (req, res) => {
     //save cube
     const { name, description, imageUrl, difficultyLevel } = req.body;
     let cube = new Cube(name, description, imageUrl, difficultyLevel);
-    Cube.save(cube);
+    // Cube.save(cube);
+    cube.save();
 
     //redirect
     res.redirect('/');
