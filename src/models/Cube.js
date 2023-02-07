@@ -14,6 +14,13 @@ const cubeSchema = new mongoose.Schema({
         type: String,
         required: true,
         //Add http/https validation
+        // match: /^https?:\/\//,
+        validate: {
+            validator: function(value) {
+                return value.startsWith('http://') || value.startsWith('https://')
+            },
+            message: 'Url is invalid!'
+        }
     },
     difficultyLevel: {
         type: Number,
