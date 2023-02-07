@@ -4,8 +4,9 @@
 //modular router
 
 const router = require('express').Router();
-const homeController = require('./controllers/homeController');
+
 const cubeController = require('./controllers/cubeController');
+const homeController = require('./controllers/homeController');
 const accessoryController = require('./controllers/accessoryController');
 
 // router.get('/', (req, res) => {
@@ -30,7 +31,6 @@ router.post('/create', cubeController.postCreateCube);
 router.get('/details/:cubeId', cubeController.getDetails);
 
 router.get('/cubes/:cubeId/attach', cubeController.getAttachAccessory);
-router.post('/cubes/:cubeId/attach', cubeController.postAttachAccessory);
 
 router.use('/accessory', accessoryController);
 
